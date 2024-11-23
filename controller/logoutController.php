@@ -3,5 +3,5 @@ if ($_REQUEST) {
     @session_start();
     @session_destroy();
     @session_abort();
-    header('location:../index.php?cod=expired');
+    header('location:../login.php?cod=expired');
 }

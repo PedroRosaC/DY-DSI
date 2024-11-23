@@ -12,11 +12,11 @@ if ($_POST) {
             $_SESSION['login'] = $usuario->getId();
             $_SESSION['nome'] = $usuario->getNome();
             echo 'login'.$_SESSION['login'];
-          // header('location:../home.php');
+           header('location:../home.php');
         } else {
-          //  header('location:../index.php?cod=error');
+            header('location:../login.php?cod=error');
         }
     } else {
-        //header('location:../index.php?cod=fail');
+        header('location:../login.php?cod=fail');
     }
 }

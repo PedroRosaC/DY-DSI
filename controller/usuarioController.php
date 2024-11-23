@@ -12,9 +12,9 @@ if ($_POST) {
     $usuario->setSenha($_POST['senha']);
     $total = $usuario->save();
     if ($total > 0) {
-        header('location:../index.php?cod=SuccessCad');
+        header('location:../login.php?cod=SuccessCad');
     } else {
-        header('location:../index.php?cod=ErrorCad');
+        header('location:../login.php?cod=ErrorCad');
     }
 }
 function loadById($id)
@@ -24,3 +24,4 @@ function loadById($id)
     @$usuario = $usuario->loadById($id);
     return $usuario;
 }
+

@@ -14,6 +14,7 @@
 </head>
 <body>
     <div class="header">
+        <div class="content-header">
             <a href="" class="link">D<span style="color:blue;" >Y</span>SCIPLINE</a>
             <a href="" class="link">Página Inicial</a>
             <?php
@@ -24,10 +25,5 @@
             ?>
             <a href="controller/logoutController.php?cmd=logout" class="link exit">Sair</a>
         </div>
-    <div class="container">
-        <div class="align-items-center" style="width: 100%; text-align: center;">
-            <img src="resources/img/offsina_logo.png">
-        </div>
-        <nav>
-        </nav>
-        <main>
+    </div>
+       

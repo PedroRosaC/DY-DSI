@@ -51,8 +51,8 @@ if (isset($cod)) {
             <input type="password" class="input" id="senha" name="senha" placeholder="Digite sua senha">
         </div>
         <div class="text">
-            <input type="submit" class="" value="Login">
-            <input type="reset" class="" value="Limpar campos">
+            <input type="submit" class="button submit" value="Login">
+            <input type="reset" class="button" value="Limpar campos">
         </div>
         <a class="link" href="cadastro.php">Não tem uma conta? Clique aqui!</a>
     </form>

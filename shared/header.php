@@ -15,7 +15,7 @@
 <body>
     <div class="header">
         <div class="content-header">
-            <a href="" class="link">D<span style="color:blue;" >Y</span>SCIPLINE</a>
+            <a href="home.php" class="link">D<span style="color:blue;" >Y</span>SCIPLINE</a>
             <a href="" class="link">Página Inicial</a>
             <?php
             @session_start();

@@ -18,22 +18,22 @@
 @$cod = $_REQUEST['cod'];
 if (isset($cod)) {
     if ($cod == 'expired') {
-        echo ('<br><div class="alert alert-danger">');
+        echo ('<br><div class="error">');
         echo ('Sua Sessão expirou, logue novamente');
         echo ('</div>');
     }
     if ($cod == 'error') {
-        echo ('<br><div class="alert alert-danger">');
+        echo ('<br><div class="error">');
         echo ('login e/ou senha inválidos!');
         echo ('</div>');
     }
     if ($cod == 'fail') {
-        echo ('<br><div class="alert alert-warning">');
+        echo ('<br><div class="aviso">');
         echo ('Preencha os dados corretamente!');
         echo ('</div>');
     }
     if ($cod == 'SuccessCad') {
-        echo ('<br><div class="alert alert-success">');
+        echo ('<br><div class="success">');
         echo ('Cliente cadastrado com sucesso!');
         echo ('</div>');
     }

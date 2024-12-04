@@ -93,28 +93,11 @@ class metaModel
         $con->Desconectar();
         return $con->total;
     }
-    public function loadById($id)
-    {
-        $con = new ConexaoMysql();
-        $con->Conectar();
-        $this->id = $id;
-        $sql = 'SELECT * FROM metas WHERE id=' . $this->id . ';';
-        $resultList = $con->Consultar($sql);
-        foreach ($resultList as $key => $value) {
-            $this->id = $value['id'];
-            $this->nome = $value['nome'];
-            $this->status = $value['status'];
-            $this->prioridade = $value['prioridade'];
-            $this->data = $value['data'];
-        }
-        $con->Desconectar();
-        return $this;
-    }
     public function loadAllStatus0()
     {
         $con = new ConexaoMysql();
         $con->Conectar();
-        $sql = 'SELECT * FROM metas where status= 0;';
+        $sql = 'SELECT * FROM metas where status= 0 and usuario_id='.$_SESSION['id'].'';
         $resultList = $con->Consultar($sql);
         $con->Desconectar();
         return $resultList;
@@ -135,7 +118,7 @@ class metaModel
     {
         $con = new ConexaoMysql();
         $con->Conectar();
-        $sql = 'SELECT * FROM metas where status= 1;';
+        $sql = 'SELECT * FROM metas where status= 1 and usuario_id='.$_SESSION['id'].'';
         $resultList = $con->Consultar($sql);
         $con->Desconectar();
         return $resultList;

@@ -92,6 +92,7 @@ h1{
     align-items: center;
 }
 .error{
+    font-family: sans-serif;
     border-radius: 10px;
     margin: 0 auto;
     padding: 10px;
@@ -99,6 +100,7 @@ h1{
     border: 1px solid #af0303;
 }
 .aviso{
+    font-family: sans-serif;
     border-radius: 10px;
     margin: 0 auto;
     padding: 10px;
@@ -106,6 +108,7 @@ h1{
     border: 1px solid #af9503;
 }
 .success{
+    font-family: sans-serif;
     border-radius: 10px;
     margin: 0 auto;
     padding: 10px;

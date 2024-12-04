@@ -8,9 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DYSCIPLINE</title>
     
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-    <script src="resources/js/bootstrap.bundle.min.js"></script>
-    
 </head>
 <body>
 
@@ -40,7 +37,7 @@ if (isset($cod)) {
 }
 ?>
 <div class="container">
-<h1 class="mt-5">L<span style="color:blue;" >o</span>gin</h1>
+<h1>L<span style="color:blue;">o</span>gin</h1>
     <form method="post" action="controller/loginController.php">
         <div class="text">
             <label for="username" class="label">Email</label>

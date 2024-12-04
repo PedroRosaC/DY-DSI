@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
+
     <link rel="stylesheet" href="css/login.css">
     <link rel="icon" type="image/x-icon" href="resources/img/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DYSCIPLINE</title>
-    
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-    <script src="resources/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="resources/css/login.css">
     
 </head>
 <body>

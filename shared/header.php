@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        
+
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="icon" type="image/x-icon" href="resources/img/favicon.png">
     <meta charset="UTF-8">
@@ -88,7 +93,7 @@
 <body>
     <div class="header">
         <div class="content-header">
-            <a href="home.php" class="link">D<span style="color:blue;">Y</span>SCIPLINE</a>
+            <a href="home.php" class="link lato-light">D<span style="color:blue;">Y</span>SCIPLINE</a>
             <a href="home.php" class="link">Página Inicial</a>
             <?php
             @session_start();

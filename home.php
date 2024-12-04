@@ -6,8 +6,8 @@ require_once 'controller/autenticationController.php';
 <div class="places">
 
     <div class="place">
-        <p>M<span style="color:blue;">i</span>nhas T<span style="color:blue;">a</span>refas D<span style="color:blue;">i</span>árias</p>
-        <a href="page.php?cod=tasks">Tarefas</a>
+        <h3>M<span style="color:blue;">i</span>nhas T<span style="color:blue;">a</span>refas D<span style="color:blue;">i</span>árias</h3>
+        <a class="link" href="page.php?cod=tasks">Tarefas</a>
         <form method="post" action="controller/tarefasController.php">
             <input type="hidden" name="usuario_id" value="<?php @session_start();
                                                             $_SESSION['id'] ?>"><!--usuairo id -->
@@ -27,8 +27,8 @@ require_once 'controller/autenticationController.php';
         </form>
     </div>
     <div class="place">
-        <p>M<span style="color:blue;">i</span>nhas m<span style="color:blue;">e</span>tas</p>
-        <a href="page.php?cod=goals">Metas</a>
+        <h3>M<span style="color:blue;">i</span>nhas m<span style="color:blue;">e</span>tas</h3>
+        <a class="link" href="page.php?cod=goals">Metas</a>
         <form method="post" action="controller/metasController.php">
             <input type="hidden" name="usuario_id" value="<?php @session_start();
                                                             $_SESSION['id'] ?>"><!--usuairo id -->
@@ -52,12 +52,12 @@ require_once 'controller/autenticationController.php';
         </form>
     </div>
     <div style="border: 1px solid blue;" class="place">
-        <p>C<span style="color:blue;">a</span>lendário P<span style="color:blue;">e</span>ssoal</p>
-        <a href="page.php?cod=calendar">Calendario</a>
+        <h3>C<span style="color:blue;">a</span>lendário P<span style="color:blue;">e</span>ssoal</h3>
+        <a class="link" href="page.php?cod=calendar">Calendario</a>
     </div>
     <div class="place">
-        <p>C<span style="color:blue;">r</span>iação de P<span style="color:blue;">r</span>ojetos</p>
-        <a href="page.php?cod=project">Projetos</a>
+        <h3>C<span style="color:blue;">r</span>iação de P<span style="color:blue;">r</span>ojetos</h3>
+        <a class="link" href="page.php?cod=project">Projetos</a>
     </div>
 </div>
 

@@ -24,4 +24,3 @@ function loadById($id)
     @$usuario = $usuario->loadById($id);
     return $usuario;
 }
-

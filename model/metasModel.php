@@ -1,12 +1,13 @@
 <?php
 require_once 'conexaoMysql.php';
-class AnimalModel
+class metaModel
 {
     protected $id;
     protected $nome;
     protected $status;
     protected $prioridade;
-    protected $data; 
+    protected $data;
+    protected $usuario_id;
 
     public function getId()
     {
@@ -57,5 +58,96 @@ class AnimalModel
         $this->data = $data;
 
         return $this;
+    }
+    public function getusuario_id()
+    {
+        return $this->usuario_id;
+    }
+    public function setusuario_id($usuario_id): self
+    {
+        $this->usuario_id = $usuario_id;
+        return $this;
+    }
+    public function save()
+    {
+        $con = new ConexaoMysql();
+        $con->Conectar();
+        if ($this->id > 0) {
+            $sql = 'UPDATE metas SET 
+            nome = "' . $this->nome . '",
+            status = ' . $this->status . ', 
+            prioridade = ' . $this->prioridade . ',
+            data = "' . $this->data . '"
+            WHERE (id = ' . $this->id . ') and (usuario_id = ' . $this->usuario_id . ')';
+        } else {
+            $sql = 'INSERT INTO metas
+            VALUES (0, 
+            "' . $this->nome . '", 
+            0,
+            ' . $this->prioridade . ', 
+            "' . $this->data . '", 
+            ' . $this->usuario_id . ')';
+        }
+        echo $sql;
+        $con->Executar($sql);
+        $con->Desconectar();
+        return $con->total;
+    }
+    public function loadById($id)
+    {
+        $con = new ConexaoMysql();
+        $con->Conectar();
+        $this->id = $id;
+        $sql = 'SELECT * FROM metas WHERE id=' . $this->id . ';';
+        $resultList = $con->Consultar($sql);
+        foreach ($resultList as $key => $value) {
+            $this->id = $value['id'];
+            $this->nome = $value['nome'];
+            $this->status = $value['status'];
+            $this->prioridade = $value['prioridade'];
+            $this->data = $value['data'];
+        }
+        $con->Desconectar();
+        return $this;
+    }
+    public function loadAllStatus0()
+    {
+        $con = new ConexaoMysql();
+        $con->Conectar();
+        $sql = 'SELECT * FROM metas where status= 0;';
+        $resultList = $con->Consultar($sql);
+        $con->Desconectar();
+        return $resultList;
+    }
+    public function end()
+    {
+        $con = new ConexaoMysql();
+        $con->Conectar();
+            $sql = 'UPDATE metas 
+            SET status = 1
+            WHERE (id = ' . $this->id . ') and (usuario_id = ' . $this->usuario_id . ');';
+        echo $sql;
+        $con->Executar($sql);
+        $con->Desconectar();
+        return $con->total;
+    }
+    public function loadAllStatus1()
+    {
+        $con = new ConexaoMysql();
+        $con->Conectar();
+        $sql = 'SELECT * FROM metas where status= 1;';
+        $resultList = $con->Consultar($sql);
+        $con->Desconectar();
+        return $resultList;
+    }
+    public function delete()
+    {
+        $db = new ConexaoMysql();
+        $db->Conectar();
+        $sql = 'DELETE FROM metas WHERE id=' . $this->id.' and usuario_id= '.$this->usuario_id.'';
+        echo $sql;
+        $db->Executar($sql);
+        $db->Desconectar();
+        return $db->total;
     }
 }

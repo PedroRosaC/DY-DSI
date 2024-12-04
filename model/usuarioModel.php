@@ -88,7 +88,7 @@ class usuarioModel
             `nome` = "' . $this->nome . '",
             `email` = "' . $this->email . '",
             `senha` = "' . $this->senha . '",
-            `pontuacao` = ' . $this->pontuacao . '
+            `pontuacao` = 0
             WHERE (`id` = ' . $this->id . ');';
         } else {
             $sql = 'INSERT INTO usuario VALUES 

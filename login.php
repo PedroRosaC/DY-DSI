@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="resources/css/login.css">
     <link rel="icon" type="image/x-icon" href="resources/img/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

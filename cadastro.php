@@ -38,7 +38,7 @@
         <input type="password" value="<?php echo @(isset($usuario) ? $usuario->getSenha() : '') ?>"class="input" id="senha" name="senha" placeholder="Digite sua senha">
     </div>
     <div class="text">
-        <input href="/controller/usuarioController.php?cad=cadastro" type="submit" class="button" value="Cadastrar-se">
+        <input href="/controller/usuarioController.php" type="submit" class="button" value="Cadastrar-se">
         <input type="reset" class="button" value="Limpar campos">
     </div>
     <br>

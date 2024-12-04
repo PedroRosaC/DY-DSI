@@ -8,7 +8,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DYSCIPLINE</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="resources/css/login.css">
+=======
+>>>>>>> 5ad18bfc03078f4d047e39a56304b0c15534ff50
     
 </head>
 <body>

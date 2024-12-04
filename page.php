@@ -23,8 +23,13 @@ require_once './shared/header.php';
                                 <p>Nome: ' . $value['nome'] . '</p><br>
                                 <p>Data: ' . $value['data'] . '</p>
                                 <br>
+<<<<<<< HEAD
                                 <p>Status:<a class="button link" href="controller/metasController.php?cod=concluir&&id=' . $value['id'] . '">Concluir</a> </p>
                               </th>1
+=======
+                                <span>Status:<a class="button link" href="controller/metasController.php?cod=concluir&&id=' . $value['id'] . '">Concluir</a> </span>
+                              </th>
+>>>>>>> 5ad18bfc03078f4d047e39a56304b0c15534ff50
                              </tr>';
                     }
                     ?>

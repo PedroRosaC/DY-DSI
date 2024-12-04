@@ -85,7 +85,7 @@ class tarefaModel
     {
         $con = new ConexaoMysql();
         $con->Conectar();
-        $sql = 'SELECT * FROM tarefas where status= 0;';
+        $sql = 'SELECT * FROM tarefas where status= 0 and usuario_id='.$_SESSION['id'].'';
         $resultList = $con->Consultar($sql);
         $con->Desconectar();
         return $resultList;
@@ -94,7 +94,7 @@ class tarefaModel
     {
         $con = new ConexaoMysql();
         $con->Conectar();
-        $sql = 'SELECT * FROM tarefas where status= 1;';
+        $sql = 'SELECT * FROM tarefas where status= 1 and usuario_id='.$_SESSION['id'].'';
         $resultList = $con->Consultar($sql);
         $con->Desconectar();
         return $resultList;

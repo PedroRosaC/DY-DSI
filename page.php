@@ -24,7 +24,7 @@ require_once './shared/header.php';
                                 <span>Data: ' . $value['data'] . '</span>
                                 <br>
                                 <span>Status:<a class="button link" href="controller/metasController.php?cod=concluir&&id=' . $value['id'] . '">Concluir</a> </span>
-                              </th>1
+                              </th>
                              </tr>';
                     }
                     ?>
